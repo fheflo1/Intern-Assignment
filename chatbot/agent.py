@@ -35,14 +35,14 @@ class SQLAgent:
     def ask(self, user_query: str):
         sql_query = self.generate_sql(user_query)
         if not self.validate_sql(sql_query):
-            return "Invalid query. Please try again."
+            return None, "Invalid query. Please try again."
         try:
             result = self.execute_sql(sql_query)
-            return result
+            return sql_query, result
         except Exception as e:
             fix_attempt = self.fix_sql(sql_query, str(e))
             if not self.validate_sql(fix_attempt):
-                return (fix_attempt, f"Error when attempting to fix query: {e}")
+                return None, f"Error when attempting to fix query: {e}"
             
             try:
                 result2 = self.execute_sql(fix_attempt)
