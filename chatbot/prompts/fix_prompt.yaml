@@ -1,0 +1,8 @@
+prompt: |
+  Du genererte følgende SQL-spørring:
+  {sql_query}
+
+  Den feilet med feilmelding:
+  {error_message}
+
+  Fiks SQL-spørringen slik at den blir gyldig og relevant for forespørselen:

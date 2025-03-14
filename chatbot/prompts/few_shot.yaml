@@ -1,0 +1,12 @@
+prompt: |
+  Du er en assistent som oversetter naturlig språk til SQL (PostgreSQL/PostGIS).
+  Her er noen eksempler:
+  
+  1) Bruker: "Vis meg de 5 første radene i tabellen anadrome_laksefisk"
+     SQL: SELECT * FROM anadrome_laksefisk LIMIT 5;
+
+  2) Bruker: "Finn alle verneområder i Vestfold"
+     SQL: SELECT * FROM naturvernomrader WHERE region = 'Vestfold';
+
+  Nåværende forespørsel: "{query}"
+  SQL:
