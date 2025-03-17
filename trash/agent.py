@@ -1,6 +1,6 @@
 import re
 from langchain_community.utilities import SQLDatabase
-from chatbot.llm import load_few_shot_prompts, create_llm
+from trash.llm import load_few_shot_prompts, create_llm
 
 
 class SQLAgent:
