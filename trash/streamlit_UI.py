@@ -1,6 +1,6 @@
 import streamlit as st
 from database.db import get_sql_database
-from chatbot.agent import SQLAgent
+from trash.agent import SQLAgent
 import pandas as pd
 import geopandas as gpd
 import folium
